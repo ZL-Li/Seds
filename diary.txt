@@ -1,0 +1,18 @@
+Date		Start		Stop		Activity		Comments
+19/04/21	23:00		01:02		coding			implement quit command
+20/04/21	10:00		11:32		coding			implement print command (without comma and -n)
+20/04/21	13:00		15:13		coding			implement comma and -n of print command, create two test files
+20/04/21	15:20		15:57		coding			implement delete command, create test02.sh
+21/04/21	20:00		21:41		coding			implement substitute command, finish subset0
+21/04/21	21:41		22:27		coding			implement comma of substitute command, create test03.sh
+21/04/21	23:00		00:35		coding			implement $, create test04.sh
+22/04/21	13:00		17:20		coding			implement delimiter, check regex(backslash), create test05.sh
+22/04/21	20:00		23:00		coding			change the whole frame, implement multiple commands, create test06.sh
+23/04/21	19:20		19:44		coding			implement -f option
+23/04/21	19:50		21:17		coding			implement input files, create test07.sh to check arguments
+23/04/21	21:20		21:52		coding			implement comments, finish subset1, update test07.sh to check comments
+24/04/21	15:20		15:54		coding			change a little bit format
+24/04/21	18:30		19:10		coding			change format of finding arguments
+24/04/21	21:15		22:21		coding			implement -i option
+25/04/21	14:30		15:00		coding			implement multiple commands in subset2
+25/04/21	18:00		22:12		coding			change a big part of frame, implement labels
