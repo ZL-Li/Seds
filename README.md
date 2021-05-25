@@ -35,7 +35,7 @@
 
 Seds is a POSIX-compatible subset of sed with extended regular expressions (EREs).
 
-Sed is a very complex program which has many individual commands. I will implement only a few of the most important commands. There will also be a number of simplifying assumptions ([Assumptions](#assumptions)), which make the task easier.
+Sed is a very complex program which has many individual commands. I will implement only a few of the most important commands.
 
 ### Aims
 
@@ -61,7 +61,7 @@ $ seq 1 5 | ./seds.pl '3q'
 $ seq 10 15 | ./seds.pl '/.1/q'
 10
 11
-$seq 500 600 | ./seds.pl '/^.+5$/q'
+$ seq 500 600 | ./seds.pl '/^.+5$/q'
 500
 501
 502
@@ -192,13 +192,13 @@ zzz0
 zzz1
 ```
 
-The substitute command can be followed optionally by the modifier character g, which is the only permitted modifier character. For example:
+The substitute command can be followed optionally by the modifier character g, which is the only modifier character. For example:
 
 ```
-$ echo Hello Andrew | ./seds.pl 's/e//'
-Hllo Andrew
-$ echo Hello Andrew | ./seds.pl 's/e//g'
-Hllo Andrw
+$ echo Hello World | ./seds.pl 's/o//'
+Hell World
+$ echo Hello World | ./seds.pl 's/o//g'
+Hell Wrld
 ```
 
 Just like the other commands, the substitute command can be given addresses to be applied to:
@@ -420,11 +420,6 @@ $ seq 24 43 | ./seds.pl ' 3, 17  d  # comment'
 41
 42
 43
-```
-
-On both the command line and in a command file, a newline ends a comment.
-
-```
 $ seq 24 43 | ./seds.pl '/2/d # delete  ;  4  q # quit'
 30
 31
@@ -439,6 +434,8 @@ $ seq 24 43 | ./seds.pl '/2/d # delete  ;  4  q # quit'
 41
 43
 ```
+
+On both the command line and in a command file, a newline ends a comment.
 
 ### -i command line option
 The `Seds -i` command line options replaces file contents with the output of the Seds commands.
